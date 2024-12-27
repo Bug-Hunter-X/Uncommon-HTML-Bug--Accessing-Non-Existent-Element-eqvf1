@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Correct approach using DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('myDiv').innerHTML += "<p>This will successfully add text.</p>";
+    });
+  </script>
+</body>
+</html>
